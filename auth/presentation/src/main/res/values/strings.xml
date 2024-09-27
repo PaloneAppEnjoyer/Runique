@@ -7,4 +7,7 @@
     <string name="runique_description">Track your runs, set goals and achieve fitness milestones with our intuitive app!</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_have_an_account">Already Have An Account</string>
+    <string name="login">Login</string>
 </resources>
