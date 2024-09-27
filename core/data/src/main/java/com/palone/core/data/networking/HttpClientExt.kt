@@ -22,13 +22,13 @@ suspend inline fun <reified Response : Any> HttpClient.get(
     queryParameters: Map<String, Any?> = mapOf()
 ): Result<Response, DataError.Network> {
     return safeCall {
-        get {
+
+    get {
             url(constructRoute(route))
             queryParameters.forEach { (key, value) ->
                 parameter(key, value)
             }
         }
-
     }
 }
 
