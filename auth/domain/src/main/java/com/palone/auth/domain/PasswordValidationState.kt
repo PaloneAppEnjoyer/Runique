@@ -1,11 +1,11 @@
-package com.palone.auth.presentation.register
+package com.palone.auth.domain
 
 data class PasswordValidationState(
     val hasMinimumLength: Boolean = false,
     val hasNumber: Boolean = false,
-    val hasLoweCaseCharacter: Boolean = false,
+    val hasLowerCaseCharacter: Boolean = false,
     val hasUpperCaseCharacter: Boolean = false,
 ) {
     val isPasswordValid: Boolean
-        get() = hasMinimumLength && hasNumber && hasLoweCaseCharacter && hasUpperCaseCharacter
+        get() = hasMinimumLength && hasNumber && hasLowerCaseCharacter && hasUpperCaseCharacter
 }

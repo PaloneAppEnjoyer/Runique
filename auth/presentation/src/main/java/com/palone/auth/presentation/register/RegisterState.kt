@@ -4,6 +4,7 @@ package com.palone.auth.presentation.register
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.text2.input.TextFieldState
+import com.palone.auth.domain.PasswordValidationState
 
 data class RegisterState(
     val email: TextFieldState = TextFieldState(),

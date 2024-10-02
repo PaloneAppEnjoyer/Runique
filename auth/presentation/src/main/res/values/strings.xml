@@ -10,4 +10,14 @@
     <string name="create_account">Create Account</string>
     <string name="already_have_an_account">Already Have An Account</string>
     <string name="login">Login</string>
+    <string name="example_email">example@mail.com</string>
+    <string name="email">Email</string>
+    <string name="must_be_valid_email">Must be a valid Email</string>
+    <string name="password">Password</string>
+    <string name="your_password">Your password</string>
+    <string name="at_least_x_characters">At least %d characters</string>
+    <string name="at_least_one_number">At least one number</string>
+    <string name="contains_lowercase_character">Contains lowercase character</string>
+    <string name="contains_uppercase_character">Contains uppercase character</string>
+    <string name="register">Register</string>
 </resources>
