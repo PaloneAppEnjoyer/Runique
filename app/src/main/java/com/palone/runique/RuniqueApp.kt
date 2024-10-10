@@ -3,6 +3,7 @@ package com.palone.runique
 import android.app.Application
 import com.palone.auth.data.di.authDataModule
 import com.palone.auth.presentation.di.authViewModelModule
+import com.palone.core.data.networking.di.coreDataModule
 import com.palone.runique.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -18,7 +19,7 @@ class RuniqueApp : Application() {
         startKoin {
             androidLogger()
             androidContext(this@RuniqueApp)
-            modules(authDataModule, authViewModelModule, appModule)
+            modules(authDataModule, authViewModelModule, appModule, coreDataModule)
         }
     }
 }
