@@ -55,7 +55,7 @@ class HttpClientFactory(private val sessionStorage: SessionStorage) {
                     refreshTokens {
                         val info = sessionStorage.get()
                         val response = client.post<AccessTokenRequest, AccessTokenResponse>(
-                            route = "/accessToekn",
+                            route = "/accessToken",
                             body = AccessTokenRequest(
                                 refreshToken = info?.refreshToken ?: "",
                                 userId = info?.userId ?: ""
