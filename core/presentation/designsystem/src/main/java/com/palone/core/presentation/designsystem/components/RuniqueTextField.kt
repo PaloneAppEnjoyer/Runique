@@ -54,7 +54,7 @@ fun RuniqueTextField(
     title: String?,
     error: String? = null,
     keyboardType: KeyboardType = KeyboardType.Text,
-    additionalInfo: String?
+    additionalInfo: String? = null
 ) {
     var isFocused by remember { mutableStateOf(false) }
     Column(modifier = modifier) {
