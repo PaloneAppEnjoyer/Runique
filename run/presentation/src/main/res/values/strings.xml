@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="runique">Runique</string>
+    <string name="analytics">Analytics</string>
+    <string name="logout">Logout</string>
+    <string name="active_run">Active run</string>
+    <string name="pause_run">Pause run</string>
+    <string name="start_run">Start run</string>
+    <string name="duration">Duration</string>
+    <string name="distance">Distance</string>
+    <string name="pace">Pace</string>
+    <string name="permission_required">Permission required</string>
+    <string name="location_notification_permission_rationale">I need both because of this app\'s purpose :)</string>
+    <string name="location_permission_rationale">The main purpose of this app is GPS tracking. How else did you think this app worked??</string>
+    <string name="notification_permission_rationale">I need to dosplay the time somehow! Gimme dat by clicking Okay</string>
+    <string name="okay">Okay</string>
+</resources>

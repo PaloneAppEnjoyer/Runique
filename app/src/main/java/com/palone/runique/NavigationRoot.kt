@@ -1,6 +1,5 @@
 package com.palone.runique
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
@@ -10,6 +9,8 @@ import androidx.navigation.compose.navigation
 import com.palone.auth.presentation.intro.IntroScreenRoot
 import com.palone.auth.presentation.login.LoginScreenRoot
 import com.palone.auth.presentation.register.RegisterScreenRoot
+import com.palone.run.presentation.active_run.ActiveRunScreenRoot
+import com.palone.run.presentation.run_overview.RunOverviewScreenRot
 
 @Composable
 fun NavigationRoot(navController: NavHostController, isLoggedIn: Boolean) {
@@ -63,7 +64,10 @@ private fun NavGraphBuilder.authGraph(navController: NavHostController) {
 private fun NavGraphBuilder.runGraph(navController: NavHostController) {
     navigation(startDestination = "run_overview", route = "run") {
         composable("run_overview") {
-            Text(text = "Run Over")
+            RunOverviewScreenRot(onStartRunClick = { navController.navigate("active_run") })
+        }
+        composable("active_run") {
+            ActiveRunScreenRoot()
         }
     }
 }
