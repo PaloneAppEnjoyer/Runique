@@ -14,4 +14,8 @@
     <string name="location_permission_rationale">The main purpose of this app is GPS tracking. How else did you think this app worked??</string>
     <string name="notification_permission_rationale">I need to dosplay the time somehow! Gimme dat by clicking Okay</string>
     <string name="okay">Okay</string>
+    <string name="running_is_paused">Running is paused</string>
+    <string name="resume_or_finish_run">Resume or finish run</string>
+    <string name="resume">Resume</string>
+    <string name="finish">Finish</string>
 </resources>

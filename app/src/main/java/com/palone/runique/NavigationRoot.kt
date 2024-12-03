@@ -1,15 +1,18 @@
 package com.palone.runique
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
+import androidx.navigation.navDeepLink
 import com.palone.auth.presentation.intro.IntroScreenRoot
 import com.palone.auth.presentation.login.LoginScreenRoot
 import com.palone.auth.presentation.register.RegisterScreenRoot
 import com.palone.run.presentation.active_run.ActiveRunScreenRoot
+import com.palone.run.presentation.active_run.service.ActiveRunService
 import com.palone.run.presentation.run_overview.RunOverviewScreenRot
 
 @Composable
@@ -66,8 +69,23 @@ private fun NavGraphBuilder.runGraph(navController: NavHostController) {
         composable("run_overview") {
             RunOverviewScreenRot(onStartRunClick = { navController.navigate("active_run") })
         }
-        composable("active_run") {
-            ActiveRunScreenRoot()
+        composable(
+            route = "active_run",
+            deepLinks = listOf(navDeepLink { uriPattern = "runique://active_run" })
+        ) {
+            val context = LocalContext.current
+            ActiveRunScreenRoot(onServiceToggle = { shouldServiceRun ->
+                if (shouldServiceRun) {
+                    context.startService(
+                        ActiveRunService.createStartIntent(
+                            context,
+                            MainActivity::class.java
+                        )
+                    )
+                } else {
+                    context.startService(ActiveRunService.createStopIntent(context))
+                }
+            })
         }
     }
 }
