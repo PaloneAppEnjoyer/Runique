@@ -7,7 +7,8 @@ Includes:
 - Google Maps API integration
 - GPS tracking
 - Authentication (Bearer token)
-- Saving data to remote server (offline-first approach)
+- Saving data to remote server (offline-first approach)\
+  
 Tech stack:
 - Koin (Dependency injection)
 - Ktor (networking)
